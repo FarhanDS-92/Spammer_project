@@ -1,4 +1,5 @@
 import { API_URL } from "@/lib/API_URL.js";
+import PostAndButtons from "./PostAndButtons.jsx";
 
 export default async function PostsAndComments({ post }) {
   const res = await fetch(`${API_URL}/api/posts/${post.id}/comments`);
@@ -7,15 +8,7 @@ export default async function PostsAndComments({ post }) {
 
   return (
     <div>
-      <div className="text">
-        <h3> {post.text} </h3>
-      </div>
-      <div className="buttons">
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-      </div>
+      <PostAndButtons post={post} />
       <div className="comments">
         <ul>
           {comments.map((comment) => {

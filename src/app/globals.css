@@ -1,0 +1,61 @@
+html {
+    box-sizing: border-box;
+    background-image: url("../../public/troll_background.jpg");
+    background-size: cover;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100 vh;
+    width: 100 vw;
+}
+
+main {
+    color: white;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#addPost {
+    width: 100%;
+}
+
+#addPost form {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#addPost form textarea {
+    height: 10%;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(196, 3, 3);
+    border: none;
+    border-radius: 20px;
+
+}
+
+#addPost form button {
+    width: 10%;
+}

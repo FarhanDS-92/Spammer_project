@@ -4,7 +4,7 @@ import NewPost from "@/components/NewPost.jsx";
 export default function Home() {
   return (
     <main>
-      <h1>Spammer</h1>
+      <h1>Spammer Blog</h1>
       <NewPost />
       <Feed />
     </main>

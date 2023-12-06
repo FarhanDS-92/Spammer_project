@@ -35,15 +35,15 @@ export default function NewPost() {
   }
 
   return (
-    <div>
+    <div id="addPost">
       <form onSubmit={handleSubmit}>
-        <input
+        <textarea
           type="text"
           placeholder="Add a comment..."
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button>Add Message</button>
+        <button>Add A Post</button>
         <p>{error}</p>
       </form>
     </div>
