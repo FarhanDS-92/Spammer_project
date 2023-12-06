@@ -7,12 +7,22 @@ export default async function PostsAndComments({ post }) {
 
   return (
     <div>
-      <h3>{post.text}</h3>
-      <ul>
-        {comments.map((comment) => {
-          return <li key={comment.id}> {comment.text} </li>;
-        })}
-      </ul>
+      <div className="text">
+        <h3> {post.text} </h3>
+      </div>
+      <div className="buttons">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+      <div className="comments">
+        <ul>
+          {comments.map((comment) => {
+            return <li key={comment.id}> {comment.text} </li>;
+          })}
+        </ul>
+      </div>
     </div>
   );
 }

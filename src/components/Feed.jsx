@@ -6,8 +6,6 @@ export default async function Feed() {
   const data = await res.json();
   const feed = data.posts;
 
-  //   console.log(feed);
-
   return (
     <div>
       {feed.map((post) => {

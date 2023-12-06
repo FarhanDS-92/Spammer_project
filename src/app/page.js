@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <h1>Spammer</h1>
-      {/* <NewPost /> */}
+      <NewPost />
       <Feed />
     </main>
   );
