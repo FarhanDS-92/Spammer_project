@@ -7,7 +7,7 @@ export default async function Feed() {
   const feed = data.posts;
 
   return (
-    <div>
+    <div id="feed">
       {feed.map((post) => {
         return <PostsAndComments key={post.id} post={post} />;
       })}
