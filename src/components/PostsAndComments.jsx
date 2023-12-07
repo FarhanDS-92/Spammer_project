@@ -10,11 +10,9 @@ export default async function PostsAndComments({ post }) {
     <div>
       <PostAndButtons post={post} />
       <div className="comments">
-        <ul>
-          {comments.map((comment) => {
-            return <li key={comment.id}> {comment.text} </li>;
-          })}
-        </ul>
+        {comments.map((comment) => {
+          return <li key={comment.id}> {comment.text} </li>;
+        })}
       </div>
     </div>
   );

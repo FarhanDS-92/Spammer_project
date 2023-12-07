@@ -37,7 +37,7 @@ export default function NewPost() {
   return (
     <div id="addPost">
       <form onSubmit={handleSubmit}>
-        <textarea
+        <input
           type="text"
           placeholder="Add a comment..."
           value={text}
