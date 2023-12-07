@@ -175,17 +175,25 @@ h1 {
 }
 
 .formBtnText {
-    background-color: #22092C;
+    background-color: brown;
     color: #FFCF9D;
     border: none;
     padding: 10px;
     border-radius: 20px;
     font-weight: 600;
+    transition: 0.5s ease-in;
+}
+
+.formBtnText:hover,
+.formBtnText:focus {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px whitesmoke;
 }
 
 .inputPostText {
+    padding-left: 10px;
     width: 70%;
-    background-color: #22092C;
+    background-color: brown;
     color: #FFCF9D;
     border: none;
     min-height: 30px;
@@ -193,6 +201,14 @@ h1 {
     transition: 0.5s ease-in;
     font-weight: 600;
 }
+
+.inputPostText:hover,
+.inputPostText:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 5px whitesmoke;
+}
+
+
 
 .btn-container {
     height: 50px;
