@@ -7,13 +7,18 @@ export default async function PostsAndComments({ post }) {
   const comments = data.comments;
 
   return (
-    <div>
+    <>
       <PostAndButtons post={post} />
       <div className="comments">
         {comments.map((comment) => {
-          return <li key={comment.id}> {comment.text} </li>;
+          return (
+            <div className="replySection" key={comment.id}>
+              <p className="arrow">↳</p>
+              <li> {comment.text} </li>
+            </div>
+          );
         })}
       </div>
-    </div>
+    </>
   );
 }

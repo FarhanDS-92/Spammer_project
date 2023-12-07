@@ -36,15 +36,16 @@ export default function NewPost() {
 
   return (
     <div id="addPost">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id="formPost">
         <input
+          id="newPost"
           type="text"
           placeholder="Add a comment..."
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button>Add A Post</button>
-        <p>{error}</p>
+        <button id="btnAddPost">Add A Post</button>
+        {error ? <p id="errorNewPost">⛔{error}⛔</p> : null}
       </form>
     </div>
   );

@@ -102,9 +102,9 @@ export default function PostAndButtons({ post }) {
 
   return (
     <>
-      <div>
+      <div className="post">
         {showPost ? (
-          <p>{post.text}</p>
+          <p id="postText">{post.text}</p>
         ) : (
           <form onSubmit={handleSubmitPost}>
             <input
@@ -119,12 +119,20 @@ export default function PostAndButtons({ post }) {
             <p>{errorPost}</p>
           </form>
         )}
-        <div className="btn-Container">
-          <p>{post.likes}</p>
-          <button onClick={handleLike}>like</button>
-          <button onClick={handleComment}>Comment</button>
-          <button onClick={handleDelete}>Delete</button>
-          <button onClick={handleEdit}>Edit</button>
+        <div className="btn-container">
+          <p className="likes">{post.likes}</p>
+          <button className="btn" onClick={handleLike}>
+            👍
+          </button>
+          <button className="btn" onClick={handleComment}>
+            💬
+          </button>
+          <button className="btn" onClick={handleDelete}>
+            🗑️
+          </button>
+          <button className="btn" onClick={handleEdit}>
+            ✏️
+          </button>
         </div>
       </div>
 

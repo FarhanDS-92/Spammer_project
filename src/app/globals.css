@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
 html {
     box-sizing: border-box;
 }
@@ -14,14 +18,17 @@ p {
 }
 
 body {
-    width: 100vw;
     margin: 0;
     padding: 0;
+    background: #ff9966;
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
 }
 
 main {
-    width: 90%;
-    height: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     margin-top: 30px;
     display: flex;
@@ -33,4 +40,206 @@ main {
 
 h1 {
     margin: 0 0 20px 0;
+    font-size: 70px;
+}
+
+#addPost {
+    width: 90%;
+    height: 250px;
+    border-radius: 20px;
+}
+
+#formPost {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+
+#newPost {
+    text-align: center;
+    height: 50%;
+    width: 100%;
+    background-color: #79155B;
+    border-radius: 50px;
+    border: none;
+    color: #FFBA86;
+    font-size: 20px;
+    transition: 0.5s ease-in;
+}
+
+#newPost::placeholder {
+    color: #FFBA86;
+    font-size: 20px;
+    opacity: 1;
+}
+
+#newPost::-ms-input-placeholder {
+    color: #FFBA86;
+    font-size: 20px;
+    opacity: 1;
+}
+
+#newPost:hover,
+#newPost:focus {
+    border: none;
+    outline: none;
+    color: #79155B;
+    background-color: #FFBA86;
+    box-shadow: 0 0 10px black;
+}
+
+#newPost:focus::placeholder,
+#newPost:hover::placeholder {
+    color: #79155B;
+    opacity: 1;
+}
+
+#newPost:focus::-ms-input-placeholder,
+#newPost:hover::-ms-input-placeholder {
+    color: #79155B;
+    opacity: 1;
+}
+
+
+#btnAddPost {
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background: #2980B9;
+    transition: 0.5s ease-in;
+}
+
+#btnAddPost:focus,
+#btnAddPost:hover {
+    outline: none;
+    background: white;
+    color: #2980B9;
+}
+
+#errorNewPost {
+    font-weight: 500;
+    font-size: 20px;
+    word-spacing: 10px;
+}
+
+#feed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.post {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: none;
+    border-radius: 20px;
+    background-color: #FFCF9D;
+    color: #22092C;
+    margin: 20px 0;
+    padding: 10px 30px;
+    font-size: 20px;
+    transition: 0.5s ease-in;
+}
+
+.post:hover,
+.post:focus {
+    background-color: #22092C;
+    color: #FFCF9D;
+    transform: scale(1.05);
+}
+
+.btn-container {
+    height: 50px;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    transition: 0.5s ease-in;
+    border-radius: 50%;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #FFCF9D;
+    border-radius: 50%;
+    animation: wiggle 0.8s infinite;
+}
+
+.comments {
+    align-self: flex-start;
+    width: 95%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.replySection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    align-self: flex-start;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+li {
+    font-size: 15px;
+    word-spacing: 5px;
+    align-self: flex-start;
+    padding: 10px;
+    background-color: cyan;
+    list-style: none;
+    width: 100%;
+    border-radius: 30px;
+    transition: 0.3s ease-in;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    85% {
+        transform: rotate(20deg);
+    }
+
+    95% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
