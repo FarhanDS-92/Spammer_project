@@ -19,7 +19,7 @@ export default function PostAndButtons({ post }) {
 
   // Like method
   async function handleLike() {
-    const res = await fetch(`${API_URL}/api/posts/${post.id}/likes`, {
+    await fetch(`${API_URL}/api/posts/${post.id}/likes`, {
       method: "POST",
       cache: "no-store",
     });
@@ -32,6 +32,7 @@ export default function PostAndButtons({ post }) {
   }
   function handleCommentCancel() {
     setShowComment(false);
+    setCommenting("");
   }
   async function handleSubmitComment(e) {
     e.preventDefault();
@@ -71,8 +72,9 @@ export default function PostAndButtons({ post }) {
   function handleEdit() {
     setShowPost(false);
   }
-  function handlePostCancel() {
+  function handlePostCancel(e) {
     setShowPost(true);
+    setPosting("");
   }
   async function handleSubmitPost(e) {
     e.preventDefault();
@@ -104,16 +106,21 @@ export default function PostAndButtons({ post }) {
     <>
       <div className="post">
         {showPost ? (
-          <p id="postText">{post.text}</p>
+          <p className="postText">{post.text}</p>
         ) : (
-          <form onSubmit={handleSubmitPost}>
+          <form className="formPostText" onSubmit={handleSubmitPost}>
             <input
+              className="inputPostText"
               type="text"
               value={posting}
               onChange={(e) => setPosting(e.target.value)}
             />
-            <button>Edit Post</button>
-            <button type="button" onClick={handlePostCancel}>
+            <button className="formBtnText">Edit Post</button>
+            <button
+              className="formBtnText"
+              type="button"
+              onClick={handlePostCancel}
+            >
               Cancel
             </button>
             <p>{errorPost}</p>
@@ -137,14 +144,20 @@ export default function PostAndButtons({ post }) {
       </div>
 
       {showComment ? (
-        <form onSubmit={handleSubmitComment}>
+        <form onSubmit={handleSubmitComment} className="formComment">
           <input
+            placeholder="reply..."
+            className="inputComment"
             type="text"
             value={commenting}
             onChange={(e) => setCommenting(e.target.value)}
           />
-          <button>Comment</button>
-          <button type="button" onClick={handleCommentCancel}>
+          <button className="btnComment">Comment</button>
+          <button
+            className="btnComment"
+            type="button"
+            onClick={handleCommentCancel}
+          >
             Cancel
           </button>
           <p>{errorComment}</p>

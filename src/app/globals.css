@@ -140,7 +140,7 @@ h1 {
 }
 
 .post {
-    min-height: 100px;
+    min-height: 140px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -161,6 +161,37 @@ h1 {
     background-color: #22092C;
     color: #FFCF9D;
     transform: scale(1.05);
+}
+
+.postText {
+    min-height: 28px;
+    font-size: 20px;
+}
+
+.formPostText {
+    display: flex;
+    width: 80%;
+    gap: 10px;
+}
+
+.formBtnText {
+    background-color: #22092C;
+    color: #FFCF9D;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.inputPostText {
+    width: 70%;
+    background-color: #22092C;
+    color: #FFCF9D;
+    border: none;
+    min-height: 30px;
+    border-radius: 30px;
+    transition: 0.5s ease-in;
+    font-weight: 600;
 }
 
 .btn-container {
@@ -211,6 +242,7 @@ h1 {
 }
 
 li {
+    min-height: 40px;
     font-size: 15px;
     word-spacing: 5px;
     align-self: flex-start;
@@ -220,6 +252,44 @@ li {
     width: 100%;
     border-radius: 30px;
     transition: 0.3s ease-in;
+}
+
+.formComment {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.inputComment {
+    width: 70%;
+    background-color: cyan;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.inputComment:hover,
+.inputComment:focus {
+    outline: none;
+    box-shadow: 0 0 5px black;
+}
+
+.btnComment {
+    background-color: purple;
+    border-radius: 30px;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+    transition: 0.5s ease-in;
+}
+
+.btnComment:focus,
+.btnComment:hover {
+    outline: none;
+    box-shadow: 0 0 5px black;
 }
 
 @keyframes wiggle {
